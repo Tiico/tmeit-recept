@@ -1,0 +1,188 @@
+@import url("reset.css");
+@import url('https://fonts.googleapis.com/css?family=Lobster');
+@import url('https://fonts.googleapis.com/css?family=Asap');
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+/* ============================
+                Navbar
+   ============================*/
+
+@media screen and (max-width: 600px){
+    #status-select{
+        width: 40%;
+    }
+}
+
+.status-message select{
+    background-color: #0C7BFE;
+    color: white;
+    border: none;
+}
+.status-message select:focus{
+    background-color: #0C7BFE;
+    color: white;
+    
+}
+.status-message option:first-child{
+    display: none;
+}
+.status-message option[value="0"]{
+    background-color: white;
+    color: black;
+}.status-message option[value="1"]{
+    background-color: #4CAF50;
+    color: white;
+}
+.status-message option[value="2"]{
+    background-color: #dc3545;
+    color: white;
+}
+/* Set a style for all buttons */
+.modal-content input[type=submit], #loginbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+.modal-content input[type=submit]{
+    border-radius: 6px;
+}
+
+.modal-content input[type=submit]:hover {
+    opacity: 0.8;
+}
+#logoutbtn{
+    background-color: #dc3545;
+    color: white;
+    padding: 14px 20px;
+    margin-left: 1%;
+    border: none;
+    cursor: pointer;
+    border-radius: 6px;
+    text-decoration: none;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    background-color: #f44336;
+    border: none;
+}
+.container {
+    padding: 16px;
+}
+span.psw {
+    float: right;
+    padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+.success{
+    margin: auto;
+    width: 50%;
+    background-color: #0AAF53;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    border-radius: 6px;
+}
+.fail{
+    margin: auto;
+    width: 50%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding: 1%;
+    border-radius: 6px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    padding: 1.5%;
+    margin: 4.2% auto 15% auto; /* ~5% from the top, 15% from the bottom and centered */
+    border: 1px solid #888;
+    width: 40%; /* Could be more or less, depending on screen size */
+}
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+/* ============================
+                Register Page
+   ============================*/
+
+.wrapper {
+    text-align: center;
+    font-size: 25px;
+    margin-bottom: 2%;
+    margin-top: 1%;
+    padding: 0% 20%;
+}
+.wrapper input[type=text], input[type=password]{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 15px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 6px;
+}
+.wrapper .inputdesc{
+    color:red;
+    float: left;
+}
+.wrapper input[type=submit]{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    border-radius: 6px;
+}
+.wrapper input[type=reset]{
+    width: auto;
+    padding: 14px 20px;
+    margin-bottom: 30px;
+    background-color: #f44336;
+    border: none;
+    border-radius: 6px;
+}
