@@ -1,6 +1,8 @@
 <div class="container">
     <h2 class="display-3">Add Recipe</h2>
     
+    
+    
 
     <!-- Logged Out View -->
     <?php if(!$this->session->userdata('logged_in')) : ?>

@@ -2,7 +2,6 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>TMEIT</title>
         <meta name="Nicklas Ockelberg" content="Seminar 3">
         <meta name="viewport" content="width-device-width, initial-scale=1.0">
         <link rel="icon" href="<?php echo asset_url();?>images/Favicon.ico">
@@ -37,7 +36,7 @@
         </style>
         <?php $this->session->set_userdata('last_page', current_url()); ?>
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-            <a class="navbar-brand" href="<?php echo base_url(); ?>home">Here's Waldo</a>
+            <a class="navbar-brand" href="<?php echo base_url(); ?>home">PubRecipes</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
