@@ -4,45 +4,27 @@
     <p>Add your recipe with the proportions for 1 serving!</p>
     <br>
 
-    <select type="number" id="test" onchange="test(this.value)">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-        <option value="14">14</option>
-        <option value="15">15</option>
-    </select>
+    <button value="1" onclick="test(this.value)" class="btn btn-primary">MOAR INPUTZ</button>   
+    <br><br>
 
 
-    <div id="FormID">
-
-
+    <div id="FormID" class="form-control">
+        <?php echo form_open('Recipes/addRecipe') ?>
+            <p></p><input type="submit" value="Submit" class="btn btn-success">
+        <?php echo form_close(); ?>
     </div>
 
     <script>
+        var i = 0; /* Set Global Variable i */
 
         function test(number){
-            resetElements();
-            for(var i = 0; i < number; i++){
-                generateInputs();
-            }
+            generateInputs();
         }
-
-        var i = 0; /* Set Global Variable i */
         function increment(){
             i += 1; /* Function for automatic increment of field's "Name" attribute. */
         }
         function resetElements(){
-            document.getElementById('FormID').innerHTML = '';
+            document.getElementById('FormID').innerHTML = '';            
         }
         function removeElement(parentDiv, childDiv){
             if (childDiv == parentDiv){
@@ -60,34 +42,18 @@
         }
         function generateInputs(){
             var r = document.createElement('span');
-            var y = document.createElement("INPUT");
-            y.setAttribute("type", "text");
-            y.setAttribute("placeholder", "Name");
+
+            var input = document.createElement("input");
+            input.setAttribute("type", "text");
+            input.setAttribute("placeholder", "Ingredient");
             var g = document.createElement("IMG");
             g.setAttribute("src", "<?php echo asset_url(); ?>images/delete.png");
             increment();
-            y.setAttribute("Name", "textelement_" + i);
-            r.appendChild(y);
-            g.setAttribute("onclick", "removeElement('FormID','id_" + i + "')");
-            r.appendChild(g);
+            input.setAttribute("Name", "ingredient_" + i);
+            r.appendChild(input);
             r.setAttribute("id", "id_" + i);
-            document.getElementById("FormID").appendChild(r);
-        }
-
-        function generateForm(number){
-            //create a form
-            var f = document.createElement("form");
-            f.setAttribute('method',"post");
-            f.setAttribute('action',"Recipes/addRecipe");
-            f.className = "form-control";
-
-            //create input element
-            var i = document.createElement("input");
-            i.type = "text";
-            i.name = "user_name";
-            i.id = "user_name1";
-            i.placeholder = "Enter ingredient";
-            i.style.cssText = "width:60%; margin-right: 3%;"
+            input.style.cssText = "width:60%; margin-right: 3%;"
+            r.appendChild(input);
 
             var a = document.createElement("input")
             a.type = "number";
@@ -95,26 +61,12 @@
             a.placeholder = "Amount(g)"
             a.id = "amount1";       
             a.style.cssText = "margin-right: 10%;"
+            r.appendChild(a);
 
+            g.setAttribute("onclick", "removeElement('FormID','id_" + i + "')");
+            r.appendChild(g);
 
-            //create a button
-            var s = document.createElement("input");
-            s.type = "submit";
-            s.value = "Submit";
-            s.className = "btn btn-success";
-
-            // add all elements to the form
-
-
-            f.appendChild(i);
-            f.appendChild(a);
-            f.appendChild(s);
-
-            var container = document.getElementById("FormID");
-            var number = document.getElementById("test");
-
-            // add the form inside the body
-            container.appendChild(f);   //using jQuery or
+            document.getElementById("FormID").appendChild(r);
         }
 
     </script>
