@@ -4,7 +4,7 @@
     <p>Add your recipe with the proportions for 1 serving!</p>
     <br>
 
-    <button value="1" onclick="test(this.value)" class="btn btn-primary">MOAR INPUTZ</button>   
+    <button value="1" onclick="test(this.value)" class="btn btn-primary">MOAR INPUTZ</button>   as
     <br><br>
 
 
